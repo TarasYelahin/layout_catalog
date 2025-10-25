@@ -1,11 +1,7 @@
 @import '../variables';
-@import '../styles/stars';
+@import '../stars';
 @import '../card';
 @import '../header';
-
-* {
-  box-sizing: border-box;
-}
 
 html {
   font-family: Roboto, sans-serif;

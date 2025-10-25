@@ -1,13 +1,14 @@
 .catalog {
-  padding: 50px 40px;
+  padding: $catalog-padding;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(1, 200px);
-  gap: 48px 46px;
+  gap: $catalog-gap;
 }
 
 .card {
   position: relative;
-  padding: $spacing-lg $spacing-md;
+  padding: $spacing-lg $spacing-md $spacing-md;
   border: $border-size solid $Grey_elements;
   box-sizing: border-box;
   display: flex;
@@ -15,6 +16,7 @@
   align-items: center;
   justify-content: center;
   width: $card-width;
+  border-radius: 5px;
   overflow: visible;
   z-index: 0;
 
@@ -57,12 +59,9 @@
   }
 
   &__rating {
-    font-weight: 400;
-    line-height: 14px;
-    font-size: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 8px;
+    align-items: center;
     margin: 6px 0 8px;
   }
 
@@ -70,6 +69,7 @@
     box-sizing: border-box;
     font-weight: 700;
     color: $White;
+    line-height: 38px;
     text-align: center;
     width: $buy-width;
     height: $buy-height;
@@ -77,12 +77,18 @@
     background-color: $Blue_accent;
     border-radius: $border-radius;
     font-size: 14px;
-    line-height: 40px;
+
     text-decoration: none;
 
     transition:
       background-color $transition-time,
       color $transition-time;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $White;
+      color: $Blue_accent;
+    }
   }
 
   &__reviews {
@@ -117,12 +123,6 @@
 
   &:hover {
     z-index: 5;
-  }
-
-  &__buy:hover {
-    cursor: pointer;
-    background-color: $White;
-    color: $Blue_accent;
   }
 
   &:hover .card__inner {

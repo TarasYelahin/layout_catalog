@@ -1,17 +1,16 @@
 .stars {
-  display: flex;
+  display: inline-flex;
   gap: 4px;
 
   &__star {
+    display: inline-block;
     width: 16px;
     height: 16px;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
   }
 
-  // Active states for 1–5 stars
   &--1 .stars__star:nth-child(-n + 1),
   &--2 .stars__star:nth-child(-n + 2),
   &--3 .stars__star:nth-child(-n + 3),
