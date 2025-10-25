@@ -1,8 +1,9 @@
 .catalog {
-  padding: $catalog-padding;
+  padding: $catalog-padding-vertical $catalog-padding-horisontal;
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(1, 200px);
+  place-content: space-evenly;
+
+  grid-template-columns: repeat(1, $card-width);
   gap: $catalog-gap;
 }
 
@@ -16,7 +17,7 @@
   align-items: center;
   justify-content: center;
   width: $card-width;
-  border-radius: 5px;
+  border-radius: $border-radius;
   overflow: visible;
   z-index: 0;
 
@@ -44,7 +45,7 @@
     margin-top: 40px;
     margin-bottom: 0;
     font-weight: 500;
-    font-size: 12px;
+    font-size: $title-font-size;
     line-height: 18px;
     color: $Main_accent;
     transition: color $transition-time;
@@ -108,7 +109,7 @@
 
   &__price-title {
     font-weight: 400;
-    font-size: 12px;
+    font-size: $title-font-size;
     line-height: 18px;
     color: $Secondary_accent;
     margin: 0;
